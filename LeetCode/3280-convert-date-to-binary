@@ -1,0 +1,26 @@
+class Solution(object):
+    def convertDateToBinary(self, date):
+        """
+        :type date: str
+        :rtype: str
+        """ 
+        ans = []
+
+        def convertBinary(num):
+            binary = 0
+            power = 0
+
+            while(num > 0):
+                tmp = num % 2
+                binary = binary + (tmp*(10**power))
+                num = num / 2
+                power+=1
+            
+            return(binary)
+
+        for sub in date.split('-'):
+            tmp = convertBinary(int(sub))
+            ans.append(str(tmp))
+        
+        ans = '-'.join(ans)
+        return(ans)
