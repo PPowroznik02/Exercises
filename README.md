@@ -1,2 +1,2 @@
-# Kaggle-Exercises
-Exercises that I made from kaggle resources.
+# Exercises
+Exercises that I made from online resources.
